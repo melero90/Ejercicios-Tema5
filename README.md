@@ -81,8 +81,14 @@ Al igual que en el ejercicio 2.1:
 
 ###Ejercicio5
 
+**Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.**
+
 ###Ejercicio6
 
+**Usar juju para hacer el ejercicio anterior.**
+
 ###Ejercicio7
+
+**Instalar una máquina virtual Ubuntu 12.04 para el hipervisor que tengas instalado.**
 
 

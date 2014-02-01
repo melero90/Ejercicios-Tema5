@@ -22,10 +22,27 @@ El resultado obtenido a sido:
     INFO: /dev/kvm exists
     KVM Aceleration can be used
     
+Una vez comprobamos esto procedemos a instalar los paquetes mediante la siguiente orden:
+
+    sudo apt-get install qemu-kvm qemu-system libvirt-bin virtinst virt-manager
+    
+![imageninstalacion](https://dl.dropbox.com/s/6xt5qk9w5a96m3k/instalandoej1.png)
+    
 
 ###Ejercicio2
 
 1.Crear varias máquinas virtuales con algún sistema operativo libre, Linux o BSD. Si se quieren distribuciones que ocupen poco espacio con el objetivo principalmente de hacer pruebas se puede usar CoreOS (que sirve como soporte para Docker) GALPon Minino, hecha en Galicia para el mundo, Damn Small Linux, SliTaz (que cabe en 35 megas) y ttylinux (basado en línea de órdenes solo).
+
+El primer paso es activar el modulo de virtualizacion
+
+    sudo modprobe kvm-intel
+    
+Vamos a instalar un SO ligero, [ttylinux](http://ttylinux.net/). Para ello nos descargamos una de las [imagenes](http://ttylinux.net/dloadV-x86_64.html), creamos un disco duro virtual y la lanzamos con quemu.
+
+    qemu-img create -f raw ttylinuxhdd.img 100M
+    qemu-system-x86_64 -hda ttylinuxhdd.img -cdrom ttylinux-virtio_x86_64-16.1.iso -show-cursor
+    
+![ttylinux](https://dl.dropbox.com/s/tikqctdr59vqcou/ttylinux.png)
 
 2. Hacer un ejercicio equivalente usando otro hipervisor como Xen, VirtualBox o Parallels.
 
@@ -41,6 +58,8 @@ He usado VirtualBox para instalar Debian 7.3. Aquí muestro algunas capturas del
 
 
 ###Ejercicio3
+
+Crear un benchmark de velocidad de entrada salida y comprobar la diferencia entre usar paravirtualización y arrancar la máquina virtual simplemente con qemu-system-x86_64 -hda /media/Backup/Isos/discovirtual.img
 
 ###Ejercicio4
 

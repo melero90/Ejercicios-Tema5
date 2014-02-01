@@ -72,7 +72,7 @@ Vamos a instalar [Lubuntu](http://es.wikipedia.org/wiki/Lubuntu) que es la que m
 Al igual que en el ejercicio 2.1:
 
     qemu-img create -f qcow2 lubuntuhdd.img 10G
-    qemu-system-x86_64 -hda hdd.img -cdrom lubuntu-12.04-desktop-amd64.iso -m 512M
+    qemu-system-x86_64 -hda lubuntuhdd.img -cdrom lubuntu-12.04-desktop-amd64.iso -m 512M
     
 ![imagen5](https://dl.dropbox.com/s/k5pi17ujqsxbcp7/Lubuntu_Install.png)
 

@@ -83,6 +83,24 @@ Al igual que en el ejercicio 2.1:
 
 **Crear una máquina virtual ubuntu e instalar en ella un servidor nginx para poder acceder mediante web.**
 
+Se ha elegido la máquina Ubuntu que se instalo para la practica 3 de la asignatura. Asi abrimos virtualBox y arrancamos Kubuntu:
+
+![imagen7](https://dl.dropbox.com/s/29pojo59crm79ft/cargando%20kubuntu.png)
+
+Abrimos la Konsola e instalamos Nginx:
+
+        sudo apt-get install nginx
+        
+![imagen8](https://dl.dropbox.com/s/8kcncakuzz872z6/instalando%20nginx.png)
+
+![imagen9](https://dl.dropbox.com/s/ftm52fmbf9g7lh2/instalado%20nginx.png)
+
+Iniciamos el servicio nginx con la siguiente orden:
+
+        sudo service nginx start
+        
+![imagen10](https://dl.dropbox.com/s/phu0j1ec71fxgkg/usando%20nginx.png)
+
 ###Ejercicio6
 
 **Usar juju para hacer el ejercicio anterior.**
